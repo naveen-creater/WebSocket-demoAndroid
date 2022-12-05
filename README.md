@@ -7,9 +7,12 @@ ws://www.example.com/
 wss://www.example.com/
 ```
  OkHttp WebSocket
+ 
 okhttp
 ```
 implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+```
+
 ```
 client = new OkHttpClient.Builder()
         .writeTimeout(5, TimeUnit.SECONDS)
@@ -19,7 +22,9 @@ client = new OkHttpClient.Builder()
 request = new Request.Builder().url(url).build();
 client.newWebSocket(request, createListener());
 ```
+
 createListener
+
 ```
 private WebSocketListener createListener() {
     return new WebSocketListener() {
